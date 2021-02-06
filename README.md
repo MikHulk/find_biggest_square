@@ -2,11 +2,12 @@
 
 Il s’agit de trouver le plus grand carré possible sur un plateau en évitant des obstacles.
 Un plateau vous est transmis dans un fichier passé en argument du programme.
-La première ligne du plateau contient les informations pour lire la carte :
-  – Le nombre de lignes du plateau ;
-  – Le caractère "vide" ;
-  – Le caractère "obstacle" ;
-  – Le caractère "plein".
+La première ligne du plateau contient les informations pour lire la carte:
+
+  - Le nombre de lignes du plateau ;
+  - Le caractère "vide" ;
+  - Le caractère "obstacle" ;
+  - Le caractère "plein".
   
 Le plateau est composé de lignes de ’caractère "vide"’ et de ’caractère "obstacle"’.
 
@@ -26,7 +27,7 @@ ligne puis il passera au traitement du plateau suivant.
 
 
 ## Exemple de fonctionnement
-
+```
 %>cat example_file
 9.ox
 ...........................
@@ -49,15 +50,18 @@ ligne puis il passera au traitement du plateau suivant.
 ......o..............o.....
 ..o.......o................
 %>
+```
 /!\ C’est bien un carré. Même si cela n’y ressemble pas visuellement
-• Générateur de plateaux :
-◦ Tu trouveras ci-joint un générateur de plateaux (map_gen.py) en python3 prenant trois
+
+## Générateur de plateaux :
+Tu trouveras ci-joint un générateur de plateaux (map_gen.py) en python3 prenant trois
 paramètres:
-– nombres de colonnes ;
-– nombres de lignes ;
-– densité des obstacles.
-• Consignes :
-◦ Exercice à réaliser en python 3.
-◦ Uniquement la librairie standard python est autorisé.
-◦ Le programme peut prendre de 1 à N fichiers en paramètre.
-◦ A rendre sur github.
+- nombres de colonnes ;
+- nombres de lignes ;
+- densité des obstacles.
+
+Consignes :
+- Exercice à réaliser en python 3.
+- Uniquement la librairie standard python est autorisé.
+- Le programme peut prendre de 1 à N fichiers en paramètre.
+- A rendre sur github.
