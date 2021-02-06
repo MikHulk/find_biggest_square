@@ -1,4 +1,4 @@
-# Le plus grand carré :
+# Le plus grand carré
 
 Il s’agit de trouver le plus grand carré possible sur un plateau en évitant des obstacles.
 Un plateau vous est transmis dans un fichier passé en argument du programme.
@@ -16,6 +16,12 @@ représenter le plus grand carré possible.
 
 Dans le cas où il y en a plusieurs solutions, on choisira de représenter le carré le plus en haut à
 gauche.
+
+## Lancer le programme
+
+```
+$ python3 find_square.py un_fichier un_deuxième and_so_on
+```
 
 ## Carte valide
 * Toutes les lignes doivent avoir la même longueur.
