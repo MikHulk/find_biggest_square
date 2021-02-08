@@ -5,10 +5,10 @@ Un plateau vous est transmis dans un fichier passé en argument du programme.
 
 La première ligne du plateau contient les informations pour lire la carte :
 
-  – Le nombre de lignes du plateau ;
-  – Le caractère "vide" ;
-  – Le caractère "obstacle" ;
-  – Le caractère "plein".
+  * Le nombre de lignes du plateau ;
+  * Le caractère "vide" ;
+  * Le caractère "obstacle" ;
+  * Le caractère "plein".
   
 Le plateau est composé de lignes de ’caractère "vide"’ et de ’caractère "obstacle"’.
 
