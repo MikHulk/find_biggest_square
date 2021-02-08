@@ -61,11 +61,15 @@ class Board:
     @property
     def biggest_square(self):
         if self._biggest_square is None:
+            side_length = len(self.area[0])
             for x in range(0, len(self.area)):
+                if self._biggest_square and self._biggest_square[2] == side_length:
+                    break
                 for y in range(0, len(self.area[0])):
                     side = self.get_biggest_square_from(x, y)
                     if self._biggest_square is None or side > self._biggest_square[0]:
                         self._biggest_square = side, x, y
+                side_length -= 1
         return self._biggest_square
 
     def draw(self):
