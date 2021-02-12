@@ -7,13 +7,16 @@ import random
 
 def map_gen(x, y, density):
     print('{}.ox'.format(y))
+    lines = []
     for i in range(int(y)):
+        line = []
         for j in range(int(x)):
             if (random.randint(0, int(y)) * 2) < int(density):
-                print('o', end='')
+                line.append('o')
             else:
-                print('.', end='')
-        print('', end='\n')
+                line.append('.')
+        lines.append(''.join(line))
+    print('\n'.join(lines))
 
 
 if __name__ == '__main__':

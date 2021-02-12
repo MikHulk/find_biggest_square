@@ -1,5 +1,60 @@
 # Le plus grand carré
 
+## Déamarrage rapide
+
+Pour lancer le programme:
+
+```
+$ python3 find_square.py un_fichier un_deuxième and_so_on
+```
+
+Celui-ci attend en paramètres des représentations de plateau sous forme de fichier texte.
+
+Vous pouvez en générer grâce à l'utilitaire `map_gen`:
+```
+$ python3 map_gen.py 10 10 1 > test_0
+$ cat test_0
+10.ox
+........o.
+..........
+..........
+....o.....
+..........
+....o.o...
+.......o.o
+..........
+..........
+o.........
+$ python3 find_square.py test_0
+===
+test_0
+Biggest square with 4 units side at (0, 0)
+xxxx....o.
+xxxx......
+xxxx......
+xxxxo.....
+..........
+....o.o...
+.......o.o
+..........
+..........
+o.........
+$
+```
+
+Enfin pour lancer les tests unitaires:
+
+```
+$ python3 tests.py 
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.015s
+
+OK
+```
+
+## Explications
+
 Il s’agit de trouver le plus grand carré possible sur un plateau en évitant des obstacles.
 Un plateau vous est transmis dans un fichier passé en argument du programme.
 
@@ -18,13 +73,7 @@ représenter le plus grand carré possible.
 Dans le cas où il y en a plusieurs solutions, on choisira de représenter le carré le plus en haut à
 gauche.
 
-## Lancer le programme
-
-```
-$ python3 find_square.py un_fichier un_deuxième and_so_on
-```
-
-## Carte valide
+### Carte valide
 * Toutes les lignes doivent avoir la même longueur.
 * Il y a au moins une ligne d’au moins une case.
 * À la fin de chaque ligne il y a un retour à la ligne.
@@ -33,7 +82,7 @@ $ python3 find_square.py un_fichier un_deuxième and_so_on
 ligne puis il passera au traitement du plateau suivant.
 
 
-## Exemple de fonctionnement
+### Exemple de fonctionnement
 ```
 %>cat example_file
 9.ox
@@ -60,7 +109,7 @@ ligne puis il passera au traitement du plateau suivant.
 ```
 /!\ C’est bien un carré. Même si cela n’y ressemble pas visuellement
 
-## Générateur de plateaux :
+### Générateur de plateaux :
 Tu trouveras ci-joint un générateur de plateaux (map_gen.py) en python3 prenant trois
 paramètres:
 - nombres de colonnes ;
