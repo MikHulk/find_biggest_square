@@ -1,6 +1,6 @@
 # Le plus grand carré
 
-## Déamarrage rapide
+## Démarrage rapide
 
 Pour lancer le programme:
 
