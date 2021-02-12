@@ -77,8 +77,8 @@ class Board:
         if x + side >= len(self.area) or y + side >= len(self.area[0]):
             return None
         return (
-            [row[y + side] for row in (self.area[x : x + side + 1])]
-            + self.area[x + side][y : y + side]
+            tuple(row[y + side] for row in (self.area[x : x + side + 1]))
+            + tuple(self.area[x + side][y : y + side])
         )
 
     @property
@@ -119,8 +119,8 @@ class Board:
             return 0
         side = 1
         while True:
-            sides = self.get_square_sides(x, y, side)
-            if not sides or self.obstacle_repr in sides:
+            new_friends = self.get_square_sides(x, y, side)
+            if not new_friends or self.obstacle_repr in set(new_friends):
                 break
             side += 1
         return side

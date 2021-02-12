@@ -23,7 +23,7 @@ class TestBoard(unittest.TestCase):
         self.assertIsNotNone(board.get_square_sides(0, 0, 3))
         self.assertEqual(
             board.get_square_sides(0, 0, 3),
-            ['.'] * 4 + ['o'] + ['.'] * 2
+            ('.', ) * 4 + ('o', ) + ('.', ) * 2
         )
         self.assertEqual(
             board.draw(),
