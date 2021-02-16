@@ -1,4 +1,5 @@
 import sys
+from array import array
 from functools import reduce
 
 
@@ -39,7 +40,7 @@ class Board:
                  plain_repr='x', empty_repr='.'):
         self.raw_area = area
         self.area = [
-            [cell for cell in row]
+            array('u', (cell for cell in row))
             for row in (
                 self.raw_area
                 .strip('\n')
