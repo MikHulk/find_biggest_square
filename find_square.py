@@ -176,8 +176,6 @@ class Board:
 if __name__ == "__main__":
 
     for filename in sys.argv[1:]:
-        print("===")
-        print(filename)
         with open(filename) as f:
             header = f.readline().strip()
             empty_repr = header[-3]
@@ -192,6 +190,4 @@ if __name__ == "__main__":
         if not b.is_valid:
             sys.stderr.write("map error\n")
             continue
-        print(f"Biggest square with {b.biggest_square[0]} units side "
-              f"at ({b.biggest_square[1]}, {b.biggest_square[2]})")
         print(b.draw())

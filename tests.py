@@ -125,6 +125,26 @@ class TestBoard(unittest.TestCase):
             (20, 0, 0)
         )
 
+    def test_one_obstacle_at_begin(self):
+        src_area = (
+            ".........o.........\n"
+            + "...................\n" * 19
+        )
+        board = Board(src_area)
+        self.assertTrue(board.is_valid)
+        expected = (
+            ".........o.........\n"
+            + "xxxxxxxxxxxxxxxxxxx\n" * 19
+        )
+        self.assertEqual(
+            board.draw() + "\n",
+            expected
+        )
+        self.assertEqual(
+            board.biggest_square,
+            (19, 1, 0)
+        )
+
     def test_one_obstacle_middle(self):
         src_area = (
             "...................\n" * 9
