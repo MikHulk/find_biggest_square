@@ -137,8 +137,13 @@ class Board:
         """
         if self.is_valid and self._biggest_square is None:
             side_length = len(self.area[0])
-            for x in range(0, len(self.area)):
-                if self._biggest_square and self._biggest_square[2] >= side_length:
+            height = len(self.area)
+            for x in range(0, height):
+                if (
+                        self._biggest_square
+                        and self._biggest_square[2] >= side_length
+                        and height - x < side_length
+                ):
                     break
                 for y in range(0, len(self.area[0])):
                     side = self.get_biggest_square_from(x, y)
