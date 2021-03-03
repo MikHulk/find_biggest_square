@@ -286,6 +286,46 @@ class TestBoard(unittest.TestCase):
             (5, 5, 1)
         )
 
+    def test_max_square_at_the_end_of_rectangle(self):
+        src_area = "\n".join((
+            "oo.......o",
+            "o.........",
+            "..........",
+            "..........",
+            "..........",
+            "..........",
+            "..........",
+            "..........",
+            "..........",
+            "..........",
+            "..........",
+            "..........",
+        ))
+        board = Board(src_area)
+        self.assertTrue(board.is_valid)
+        expected = "\n".join((
+            "oo.......o",
+            "o.........",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+            "xxxxxxxxxx",
+        ))
+        self.assertEqual(
+            board.draw(),
+            expected
+        )
+        self.assertEqual(
+            board.biggest_square,
+            (10, 2, 0)
+        )
+
 
 if __name__ == '__main__':
     unittest.main()
